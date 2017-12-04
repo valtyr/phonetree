@@ -8,7 +8,7 @@ RUN apk add --no-cache \
     python3 \
     python3-dev \
     libffi-dev \
-    libssl-dev \
+    openssl-dev \
     alpine-sdk
 COPY . .
 RUN rm -rf public/*
