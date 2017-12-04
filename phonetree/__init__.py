@@ -34,7 +34,7 @@ def handle_key():
 
     digit_pressed = request.values.get('Digits', None)
     if digit_pressed == "1":
-        print '{}, record'.format(request.values.get("From", None))
+        print('{}, record'.format(request.values.get("From", None)))
         resp = VoiceResponse()
         resp.play(path_for_recording('leave_message'))
         resp.record(timeout=5, trim='trim-silence', action="/handle-recording")
@@ -42,7 +42,7 @@ def handle_key():
         return str(resp)
 
     elif digit_pressed == "2":
-        print '{}, listen'.format(request.values.get("From", None))
+        print('{}, listen'.format(request.values.get("From", None)))
         resp = VoiceResponse()
         resp.play(path_for_recording('listen'))
 
