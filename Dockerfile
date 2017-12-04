@@ -6,6 +6,7 @@ RUN apk add --no-cache \
     uwsgi \
     uwsgi-python3 \
     python3 \
+    python-dev \
     alpine-sdk
 COPY . .
 RUN rm -rf public/*
