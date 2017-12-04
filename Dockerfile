@@ -13,7 +13,7 @@ RUN apk add --no-cache \
 COPY . .
 RUN rm -rf public/*
 RUN pip3 install --no-cache-dir -r requirements.txt
-CMD ["uwsgi --socket 0.0.0.0:5000 --plugins python3 --protocol uwsgi --wsgi phonetree:run"]
+CMD ["uwsgi --socket 0.0.0.0:5000 --plugins python3 --protocol uwsgi --wsgi run:app"]
 
 
 # python-dev libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-dev zlib1g-dev
